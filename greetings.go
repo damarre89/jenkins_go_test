@@ -8,7 +8,6 @@ type Greeter interface {
 }
 
 type People struct {
-	// only one param
 	sGreet string
 }
 
