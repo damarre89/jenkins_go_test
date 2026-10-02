@@ -1,5 +1,21 @@
 package main
 
-func Greet() string {
-	return "Hello, world!"
+const Greetings = "Hello, world!"
+
+type Greeter interface {
+	Greet() string
+	AddGreetingsMessage(msg string)
+}
+
+type People struct {
+	sGreet string
+}
+
+func (p *People) AddGreetingsMessage(msg string) error {
+	p.sGreet = msg
+	return nil
+}
+
+func (p *People) Greet() (string, error) {
+	return p.sGreet, nil
 }

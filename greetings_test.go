@@ -4,7 +4,9 @@ import "testing"
 
 func TestHello(t *testing.T) {
 	t.Run("trigger test", func(t *testing.T) {
-		got := Greet()
+		Friends := People{}
+		Friends.AddGreetingsMessage(Greetings)
+		got, _ := Friends.Greet()
 		want := "Hello, world!"
 		assertCorrectMessage(t, got, want)
 	})
