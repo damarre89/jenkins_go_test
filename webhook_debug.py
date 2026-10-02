@@ -23,4 +23,4 @@ class Handler(BaseHTTPRequestHandler):
     def log_message(self, format, *args):
         pass
 
-HTTPServer(("0.0.0.0", 9090), Handler).serve_forever()
+HTTPServer(("0.0.0.0", 9090), Handler).serve_forever(). # quick test for webhook debuging
